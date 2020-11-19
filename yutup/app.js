@@ -1,7 +1,8 @@
+const http =require('http')
 const express = require('express')
 const route = require('./routes')
 const app = express()
-const PORT = 3031
+const PORT = process.env.PORT || 4000
 const session = require('express-session')
 
 app.set('view engine', 'ejs')
