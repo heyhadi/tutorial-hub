@@ -2,9 +2,10 @@
   "name": "tutorial-hub",
   "version": "1.0.0",
   "description": "A simple express aplication with many to many database association which shows which tutorial most liked by user.",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node /yutup/app.js"
   },
   "repository": {
     "type": "git",
