@@ -1,0 +1,30 @@
+{
+  "name": "tutorial-hub",
+  "version": "1.0.0",
+  "description": "A simple express aplication with many to many database association which shows which tutorial most liked by user.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heyhadi/tutorial-hub.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/heyhadi/tutorial-hub/issues"
+  },
+  "homepage": "https://github.com/heyhadi/tutorial-hub#readme",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "pg": "^8.5.1",
+    "sequelize": "^6.3.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6",
+    "sequelize-cli": "^6.2.0"
+  }
+}
