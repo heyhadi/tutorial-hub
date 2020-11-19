@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<%- include('partials/head') %>
+
+<body>
+
+    <h1>Register</h1>
+
+    <form action = "/register" method="post">
+        <label>First Name</label><br>
+        <input type="text" name="first_name" /><br>
+
+        <label>Last Name</label><br>
+        <input type="text" name="last_name" /><br>
+
+        <label>Username</label><br>
+        <input type="text" name="username" /><br>
+
+        <label>Password</label><br>
+        <input type="password" name="password" /><br>
+
+        <label>Gender</label><br>
+        <label><input type="radio" name="gender" value="female" >female</label>
+        <label><input type="radio" name="gender" value="male" >male</label>
+        <br>
+
+        <button type="submit">Register</button>
+
+        <a href="/users">
+            <button type="button">Cancel</button>
+        </a>
+
+    </form>
+
+
+</body>
+</html>

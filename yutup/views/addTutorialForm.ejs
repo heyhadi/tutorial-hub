@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<%- include('partials/head') %>
+
+<body>
+
+    <% if (error) { %>
+        <p style="color:red"><%= error %></p>
+    <% } %>
+
+    <form action = "/tutorials/add" method="post">
+        <label>Title</label><br>
+        <input type="text" name="title" /><br>
+
+        <label>Uploader Name</label><br>
+        <input type="text" name="uploader_name" /><br>
+
+        <button type="submit">Save</button>
+
+        <a href="/">
+            <button type="button">Cancel</button>
+        </a>
+
+    </form>
+
+
+</body>
+</html>

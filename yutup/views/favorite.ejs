@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head') %>
+<body>
+
+    <ul style="list-style: none;">
+        <li style="float: left; padding: 9px"> <a href="/">Home</a></li>
+        <li style="float: left; padding: 9px"><a href="/users">User</a></li>
+        <li style="float: left; padding: 9px"><a href="/login">Login</a></li>
+        <li style="float: left; padding: 9px"><a href="/register">Register</a></li>
+    </ul>
+    <br>
+    
+
+    <h1><%= value.title %></h1>
+    <img src="https://static.vecteezy.com/system/resources/previews/000/342/259/non_2x/vector-video-movie-media-player.jpg">
+    <br>
+    
+    <a href="/like/<%= value.id %>">
+        <button type="button">Favorite!</button>
+    </a>
+    
+    <p>Favorited by: <%= value.Users.length %></p>
+   
+    <table border="1">
+        <thead>
+            <tr>
+                <th>People who favorited</th>
+            </tr>
+        </thead>
+
+        <tbody> 
+            <% value.Users.forEach(element => { %>
+                <tr>
+                    <td><%= tuannyonya(element.gender, element.getFullName()) %></td>
+                </tr>
+            <% }) %>
+        </tbody>
+
+    </table>
+    
+
+</body>
+</html>

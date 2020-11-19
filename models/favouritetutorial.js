@@ -11,11 +11,13 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      FavouriteTutorial.belongsTo(models.User)
+      FavouriteTutorial.belongsTo(models.Tutorial)
     }
   };
   FavouriteTutorial.init({
     TutorialId: DataTypes.INTEGER,
-    UserId: DataTypes.INTEGER
+    UserId: DataTypes.INTEGER,
   }, {
     sequelize,
     modelName: 'FavouriteTutorial',
