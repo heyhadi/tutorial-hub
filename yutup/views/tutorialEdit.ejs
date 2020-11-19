@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/head') %>
+
+<body>
+
+    <form action = "/tutorials/edit/<%= data.id %>" method="post"">
+        <form action = "/tutorials/add" method="post">
+            <label>Title</label><br>
+            <input type="text" name="title" value="<%= data.title %>"/><br>
+    
+            <label>Uploader Name</label><br>
+            <input type="text" name="uploader_name" value="<%= data.uploader_name %>"/><br>
+
+        <button type="submit">Save</button>
+        
+        <a href="/">
+            <button type="button">Cancel</button>
+        </a>
+
+    </form>
+
+
+</body>
+</html>

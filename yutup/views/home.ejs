@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head') %>
+<body>
+
+    <ul style="list-style: none;">
+        <li style="float: left; padding: 9px"> <a href="/">Home</a></li>
+        <li style="float: left; padding: 9px"><a href="/users">User</a></li>
+        <li style="float: left; padding: 9px"><a href="/login">Login</a></li>
+        <li style="float: left; padding: 9px"><a href="/register">Register</a></li>
+    </ul>
+    <br>
+    
+
+    <h1>Tutorial List</h1>
+   
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Uploader Name</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody> 
+            <% data.forEach(element => { %>
+                <tr>
+                    <td><%= element.title %></td>
+                    <td><%= element.uploader_name %></td>
+                    <td>
+                        <a href="/tutorials/edit/<%= element.id %>">Edit</a> || <a href="/tutorials/delete/<%= element.id %>">Delete</a> || <a href="/tutorials/favorite/<%= element.id %>">Watch tutorial</a>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+
+    </table>
+    <a href="/tutorials/add">
+        <button type="button" class="btn btn-primary">add new</button>
+    </a>
+
+</body>
+</html>

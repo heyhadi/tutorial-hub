@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head') %>
+<body>
+
+    <ul style="list-style: none;">
+        <li style="float: left; padding: 9px"> <a href="/">Home</a></li>
+        <li style="float: left; padding: 9px"><a href="/users">User</a></li>
+        <li style="float: left; padding: 9px"><a href="/login">Login</a></li>
+        <li style="float: left; padding: 9px"><a href="/register">Register</a></li>
+    </ul>
+    <br>
+
+    <h1>List User</h1>
+   
+    <a href="/users/add">
+        <button type="button" class="btn btn-primary">Add user</button>
+    </a>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Username</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody> 
+            <% data.forEach(element => { %>
+                <tr>
+                    <td><%= element.getFullName() %></td>
+                    <td><%= element.username %></td>
+                    <td>
+                        <a href = "/users/delete/<%= element.id %>">
+                            <button onclick = "return confirm('Delete user?')">Delete</button>
+                        </a>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+
+    </table>
+    <!-- <a href="/students/add">
+        <button type="button" class="btn btn-primary">add new</button>
+    </a> -->
+
+</body>
+</html>
